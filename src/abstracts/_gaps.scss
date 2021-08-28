@@ -1,0 +1,28 @@
+:root {
+  --flvrs-gap-0:          0;
+  --flvrs-gap-multiplier: 1;
+}
+
+:root, [data-flvrs-gap-scale-override] {
+  --flvrs-gap-base: 1em;   /* base is between sm and md sizes */
+
+  --flvrs-gap-2xs:  calc(var(--flvrs-gap-base) * var(--flvrs-gap-multiplier) * 0.25);
+  --flvrs-gap-xs:   calc(var(--flvrs-gap-base) * var(--flvrs-gap-multiplier) * 0.5);
+  --flvrs-gap-sm:   calc(var(--flvrs-gap-base) * var(--flvrs-gap-multiplier) * 0.75);
+  --flvrs-gap-md:   calc(var(--flvrs-gap-base) * var(--flvrs-gap-multiplier) * 1.5);
+  --flvrs-gap-lg:   calc(var(--flvrs-gap-base) * var(--flvrs-gap-multiplier) * 2);
+  --flvrs-gap-xl:   calc(var(--flvrs-gap-base) * var(--flvrs-gap-multiplier) * 3);
+  --flvrs-gap-2xl:  calc(var(--flvrs-gap-base) * var(--flvrs-gap-multiplier) * 4);
+  --flvrs-gap-3xl:  calc(var(--flvrs-gap-base) * var(--flvrs-gap-multiplier) * 5);
+
+  --flvrs-gap-base-abs: 1rem;  /* base is between sm and md sizes */
+
+  --flvrs-gap-2xs-abs:  calc(var(--flvrs-gap-base-abs) * var(--flvrs-gap-multiplier) * 0.25);
+  --flvrs-gap-xs-abs:   calc(var(--flvrs-gap-base-abs) * var(--flvrs-gap-multiplier) * 0.5);
+  --flvrs-gap-sm-abs:   calc(var(--flvrs-gap-base-abs) * var(--flvrs-gap-multiplier) * 0.75);
+  --flvrs-gap-md-abs:   calc(var(--flvrs-gap-base-abs) * var(--flvrs-gap-multiplier) * 1.5);
+  --flvrs-gap-lg-abs:   calc(var(--flvrs-gap-base-abs) * var(--flvrs-gap-multiplier) * 2);
+  --flvrs-gap-xl-abs:   calc(var(--flvrs-gap-base-abs) * var(--flvrs-gap-multiplier) * 3);
+  --flvrs-gap-2xl-abs:  calc(var(--flvrs-gap-base-abs) * var(--flvrs-gap-multiplier) * 4);
+  --flvrs-gap-3xl-abs:  calc(var(--flvrs-gap-base-abs) * var(--flvrs-gap-multiplier) * 5);
+}

@@ -1,0 +1,41 @@
+h1 {
+  font-size: var(--flvrs-fsize-3xl);
+  line-height: var(--flvrs-lh-heading);
+  font-weight: var(--flvrs-wt-medium);
+}
+h2 {
+  font-size: var(--flvrs-fsize-2xl);
+  line-height: var(--flvrs-lh-heading);
+  font-weight: var(--flvrs-wt-medium);
+}
+h3 {
+  font-size: var(--flvrs-fsize-xl);
+  line-height: var(--flvrs-lh-heading);
+  font-weight: var(--flvrs-wt-medium);
+}
+h4 {
+  font-size: var(--flvrs-fsize-lg);
+  line-height: var(--flvrs-lh-title);
+  font-weight: var(--flvrs-wt-medium);
+}
+h5 {
+  font-size: var(--flvrs-fsize-md);
+  line-height: var(--flvrs-lh-title);
+  font-weight: var(--flvrs-wt-medium);
+}
+h6 {
+  font-size: var(--flvrs-fsize-base);
+  line-height: var(--flvrs-lh-title);
+  font-weight: var(--flvrs-wt-medium);
+}
+p, span, a, li, blockquote, label, strong, em {
+  font-size: var(--flvrs-fsize-base);
+  line-height: var(--flvrs-lh-body);
+}
+small {
+  font-size: var(--flvrs-fsize-sm);
+  line-height: var(--flvrs-lh-body);
+}
+strong {
+  font-weight: var(--flvrs-wt-medium);
+}

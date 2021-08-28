@@ -1,0 +1,63 @@
+@use '../abstracts/breakpoints' as *;
+
+:root {
+  --flvrs-grid-gap: 0;
+}
+
+// set this variable to the number of columns you want before importing the styles
+$flvrs-grid-columns: 12 !default;
+
+@mixin flvrs-define-grid() {
+  .flvrs-grid {
+    display: grid;
+    grid-gap: var(--flvrs-grid-gap);
+    grid-template-columns: repeat(#{$flvrs-grid-columns}, 1fr);
+  }
+
+  .flvrs-col--full {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  @for $i from 1 through $flvrs-grid-columns {
+    .flvrs-col--st-#{$i} {
+      grid-column-start: #{$i};
+    }
+  }
+
+  @for $i from 1 through $flvrs-grid-columns {
+    .flvrs-col--sp-#{$i} {
+      grid-column-end: span #{$i};
+    }
+  }
+
+  @for $i from 1 through $flvrs-grid-columns + 1 {
+    .flvrs-col--end-#{$i} {
+      grid-column-end: #{$i};
+    }
+  }
+
+  @each $bp-name, $bp-size in $flvrs-breakpoints {
+
+    @include flvrs-mq($bp-name) {
+
+      @for $i from 1 through $flvrs-grid-columns {
+        .flvrs-col--st-#{$bp-name}-#{$i} {
+          grid-column-start: #{$i};
+        }
+      }
+
+      @for $i from 1 through $flvrs-grid-columns {
+        .flvrs-col--sp-#{$bp-name}-#{$i} {
+          grid-column-end: span #{$i};
+        }
+      }
+
+      @for $i from 1 through $flvrs-grid-columns + 1 {
+        .flvrs-col--end-#{$bp-name}-#{$i} {
+          grid-column-end: #{$i};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+:root {
+  /* z indices */
+  --flvrs-z-min:      -999;
+  --flvrs-z-base:     1;
+  --flvrs-z-docked:   10;
+  --flvrs-z-sticky:   50;
+  --flvrs-z-popup:    500;
+  --flvrs-z-dropdown: 700;
+  --flvrs-z-overlay:  800;
+  --flvrs-z-modal:    900;
+  --flvrs-z-backdrop: 850;
+  --flvrs-z-spinner:  950;
+  --flvrs-z-toast:    1000;
+
+  /* relative border radii */
+  --flvrs-radius-sm:     0.25em;
+  --flvrs-radius-md:     0.5em;
+  --flvrs-radius-lg:     0.75em;
+  --flvrs-radius-xl:     1em;
+
+  /* absolute border radii */
+  --flvrs-radius-sm-abs: 0.25rem;
+  --flvrs-radius-md-abs: 0.5rem;
+  --flvrs-radius-lg-abs: 0.75rem;
+  --flvrs-radius-xl-abs: 1rem;
+
+  /* shadows */
+  --flvrs-shadow-focus-ring: 0px 0px 0px 3px var(--flvrs-focus-ring-color);
+  --flvrs-shadow-sm:  0px 1px 4px hsla(0, 0%, 0%, 0.15);
+  --flvrs-shadow-md: 0px 4px 12px hsla(0, 0%, 0%, 0.1);
+  --flvrs-shadow-lg: 0px 4px 20px hsla(0, 0%, 0%, 0.1);
+  --flvrs-shadow-interactive-rest:  0px 1px 4px hsla(0, 0%, 0%, 0.16);
+  --flvrs-shadow-interactive-hover: 0px 4px 12px hsla(0, 0%, 0%, 0.1);
+  --flvrs-shadow-dropdown:          0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+                                  0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* timings (for animations) */
+  --flvrs-time-0:   0ms;
+  --flvrs-time-1:   1ms;
+  --flvrs-time-xs:  150ms;
+  --flvrs-time-sm:  250ms;
+  --flvrs-time-md:  350ms;
+  --flvrs-time-lg:  500ms;
+  --flvrs-time-xl:  750ms;
+  --flvrs-time-2xl: 1000ms;
+
+  /* easing functions (for animations) */
+  --flvrs-bounce-1: cubic-bezier(0.65, 1.8, 0.4, 0.85);
+  --flvrs-bounce-2: cubic-bezier(0.6, 2.5, 0.4, 0.85);
+  --flvrs-bounce-3: cubic-bezier(0.6, 2.5, 0.7, 0.6);
+  --flvrs-bounce-4: cubic-bezier(0.65, 2.75, 0.45, 0.7);
+  --flvrs-ease-out-quick: cubic-bezier(0.25, 0.8, 0.3, 1);
+  --flvrs-ease-in-quick: cubic-bezier(0.75, 0, 0.75, 0.3);
+}

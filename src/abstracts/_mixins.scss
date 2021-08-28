@@ -1,0 +1,83 @@
+/* #region - element visibility mixins */
+@mixin flvrs-visually-hidden() {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+
+  &:focus {
+    outline: none;
+  }
+}
+.flvrs-visually-hidden,
+.flvrs-sr-only-text {
+  @include flvrs-visually-hidden();
+}
+
+@mixin flvrs-hidden() {
+  display: none;
+}
+.flvrs-hidden {
+  @include flvrs-hidden();
+}
+
+@mixin flvrs-visible() {
+  visibility: visible;
+}
+.flvrs-visible {
+  @include flvrs-visible();
+}
+
+@mixin flvrs-invisible() {
+  visibility: hidden;
+}
+.flvrs-invisible {
+  @include flvrs-invisible();
+}
+/* #endregion */
+
+/* #region - aspect ratio boxes */
+@mixin flvrs-aspect-ratio-box() {
+  position: relative;
+
+  > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  > img:first-child {
+    object-fit: cover;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: calc(
+      100% / var(--flvrs-aspect-ratio-width, 1) * var(--flvrs-aspect-ratio-height, 1)
+    );
+  }
+}
+.flvrs-aspect-ratio-box {
+  --flvrs-aspect-ratio-width: 1;
+  --flvrs-aspect-ratio-height: 1;
+  @include flvrs-aspect-ratio-box();
+}
+.flvrs-aspect-ratio-box--16-by-9 {
+  --flvrs-aspect-ratio-width: 16;
+  --flvrs-aspect-ratio-height: 9;
+  @include flvrs-aspect-ratio-box();
+}
+.flvrs-aspect-ratio-box--4-by-3 {
+  --flvrs-aspect-ratio-width: 4;
+  --flvrs-aspect-ratio-height: 3;
+  @include flvrs-aspect-ratio-box();
+}
+/* #endregion */

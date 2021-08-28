@@ -1,0 +1,51 @@
+{
+  "name": "flavours-css",
+  "version": "0.0.1",
+  "description": "An SCSS/CSS design system built for easy customisation.",
+  "main": "src/main.scss",
+  "scripts": {
+    "remove-old-build": "rimraf build",
+    "compile-grid": "parcel build src/grid.scss --no-source-maps --no-cache --out-dir build/css --out-file flavours-grid.css --no-content-hash --no-minify",
+    "compile-grid-min": "parcel build src/grid.scss --no-source-maps --no-cache --out-dir build/css --out-file flavours-grid.min.css --no-content-hash",
+    "compile-main": "parcel build src/main.scss --no-source-maps --no-cache --out-dir build/css --out-file flavours.css --no-content-hash --no-minify",
+    "compile-main-min": "parcel build src/main.scss --no-source-maps --no-cache --out-dir build/css --out-file flavours.min.css --no-content-hash",
+    "compile-scss": "npm run compile-grid && npm run compile-main",
+    "compile-scss-min": "npm run compile-grid-min && npm run compile-main-min",
+    "prefix-grid": "postcss build/css/flavours-grid.css --no-map --use autoprefixer --output build/css/flavours-grid.css",
+    "prefix-grid-min": "postcss build/css/flavours-grid.min.css --no-map --use autoprefixer --output build/css/flavours-grid.min.css",
+    "prefix-main": "postcss build/css/flavours.css --no-map --use autoprefixer --output build/css/flavours.css",
+    "prefix-main-min": "postcss build/css/flavours.min.css --no-map --use autoprefixer --output build/css/flavours.min.css",
+    "prefix-css": "npm run prefix-grid && npm run prefix-main",
+    "prefix-css-min": "npm run prefix-grid-min && npm run prefix-main-min",
+    "build": "npm run remove-old-build && npm run compile-scss && npm run compile-scss-min && npm run prefix-css && npm run prefix-css-min",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saini-g/flavours-css.git"
+  },
+  "keywords": [
+    "scss",
+    "css",
+    "design_system"
+  ],
+  "author": "Gaurav Saini <saini.gaurav2205@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saini-g/flavours-css/issues"
+  },
+  "homepage": "https://github.com/saini-g/flavours-css#readme",
+  "browserslist": [
+    "> 1%",
+    "not IE 11",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.37.5"
+  }
+}

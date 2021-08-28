@@ -1,0 +1,84 @@
+@use '../abstracts/mixins' as *;
+
+.flvrs-checkbox-toggle {
+  --flvrs-checkbox-toggle-size: 3rem;
+  --flvrs-toggle-width: var(--flvrs-checkbox-toggle-size);
+  --flvrs-toggle-height: calc((var(--flvrs-checkbox-toggle-size) / 2) * 1.2);
+  --flvrs-toggle-padding: calc(var(--flvrs-checkbox-toggle-size) * 0.075);
+  --flvrs-handle-size: calc((var(--flvrs-checkbox-toggle-size) / 2) * 0.9);
+
+  --flvrs-track-color-unchecked: var(--flvrs-neutral-400);
+  --flvrs-track-color-checked: var(--flvrs-success-300);
+  --flvrs-handle-color: var(--flvrs-neutral-100);
+
+  display: inline-flex;
+  align-items: center;
+
+  &--stacked {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .flvrs-checkbox-toggle__label {
+      margin-bottom: var(--flvrs-gap-2xs);
+    }
+  }
+
+  &__label {
+    color: var(--flvrs-neutral-700);
+    margin-right: var(--flvrs-gap-sm);
+  }
+
+  &__label--faux {
+    display: inline-block;
+    width: var(--flvrs-toggle-width);
+    height: var(--flvrs-toggle-height);
+    border-radius: calc(var(--flvrs-toggle-height) / 2);
+    cursor: pointer;
+    transition: background-color var(--flvrs-time-sm) var(--flvrs-ease-out-quick);
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: var(--flvrs-handle-size);
+      width: var(--flvrs-handle-size);
+      border-radius: calc(var(--flvrs-handle-size) / 2);
+      background-color: var(--flvrs-handle-color);
+      transform: translate(var(--flvrs-toggle-padding), var(--flvrs-toggle-padding));
+      transition: transform var(--flvrs-time-sm) var(--flvrs-ease-out-quick);
+    }
+  }
+
+  &__checkbox {
+    @include flvrs-visually-hidden();
+
+    &:disabled + .flvrs-checkbox-toggle__label--faux {
+      --flvrs-track-color-unchecked: var(--flvrs-neutral-500);
+      --flvrs-track-color-checked: var(--flvrs-success-400);
+      --flvrs-handle-color: var(--flvrs-neutral-300);
+      cursor: not-allowed;
+    }
+
+    &:focus + .flvrs-checkbox-toggle__label--faux {
+      box-shadow: var(--flvrs-shadow-focus-ring);
+    }
+
+    &:not(:checked) + .flvrs-checkbox-toggle__label--faux {
+      background-color: var(--flvrs-track-color-unchecked);
+    }
+
+    &:checked + .flvrs-checkbox-toggle__label--faux {
+      background-color: var(--flvrs-track-color-checked);
+    }
+
+    &:not(:checked) + .flvrs-checkbox-toggle__label--faux::before {
+      transform: translate(var(--flvrs-toggle-padding), var(--flvrs-toggle-padding));
+    }
+
+    &:checked + .flvrs-checkbox-toggle__label--faux::before {
+      transform: translate(
+        calc(var(--flvrs-toggle-width) - var(--flvrs-toggle-padding) - var(--flvrs-handle-size)),
+        var(--flvrs-toggle-padding)
+      );
+    }
+  }
+}
