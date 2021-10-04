@@ -1,33 +1,33 @@
 .flvrs-flex-text {
   --flvrs-lh-multiplier: 1;
   --flvrs-vgap-multiplier: 1;
-  --flvrs-txt-size-multiplier: 1;
+  --flvrs-flex-fsize-multiplier: 1;
 
   &--compact {
     --flvrs-vgap-multiplier: 0.875;
-    --flvrs-txt-size-multiplier: 0.875;
+    --flvrs-flex-fsize-multiplier: 0.875;
   }
 
   &--comfy {
     --flvrs-lh-multiplier: 1.1;
-    --flvrs-txt-size-multiplier: 1.1;
+    --flvrs-flex-fsize-multiplier: 1.1;
   }
 
   h2, .flvrs-flex-text__title, .flvrs-flex-text__heading {
     margin-bottom: calc(var(--flvrs-gap-sm) * var(--flvrs-vgap-multiplier));
-    font-size: calc(var(--flvrs-fsize-2xl) * var(--flvrs-txt-size-multiplier));
+    font-size: calc(var(--flvrs-fsize-2xl) * var(--flvrs-flex-fsize-multiplier));
     line-height: calc(var(--flvrs-lh-title) * var(--flvrs-lh-multiplier));
   }
 
   h3, .flvrs-flex-text__subtitle, .flvrs-flex-text__subheading {
     margin-bottom: calc(var(--flvrs-gap-sm) * var(--flvrs-vgap-multiplier));
-    font-size: calc(var(--flvrs-fsize-xl) * var(--flvrs-txt-size-multiplier));
+    font-size: calc(var(--flvrs-fsize-xl) * var(--flvrs-flex-fsize-multiplier));
     line-height: calc(var(--flvrs-lh-title) * var(--flvrs-lh-multiplier));
   }
 
   p, span, .flvrs-flex-text__body {
     margin-bottom: calc(var(--flvrs-gap-sm) * var(--flvrs-vgap-multiplier));
-    font-size: calc(var(--flvrs-fsize-base) * var(--flvrs-txt-size-multiplier));
+    font-size: calc(var(--flvrs-fsize-base) * var(--flvrs-flex-fsize-multiplier));
     line-height: calc(var(--flvrs-lh-body) * var(--flvrs-lh-multiplier));
   }
 
