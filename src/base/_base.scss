@@ -1,32 +1,32 @@
 h1 {
-  font-size: var(--flvrs-fsize-3xl);
+  font-size: var(--flvrs-fsize-4xl);
   line-height: var(--flvrs-lh-heading);
-  font-weight: var(--flvrs-wt-medium);
+  font-weight: var(--flvrs-wt-semi-bold);
 }
 h2 {
-  font-size: var(--flvrs-fsize-2xl);
+  font-size: var(--flvrs-fsize-3xl);
   line-height: var(--flvrs-lh-heading);
-  font-weight: var(--flvrs-wt-medium);
+  font-weight: var(--flvrs-wt-semi-bold);
 }
 h3 {
-  font-size: var(--flvrs-fsize-xl);
+  font-size: var(--flvrs-fsize-2xl);
   line-height: var(--flvrs-lh-heading);
-  font-weight: var(--flvrs-wt-medium);
+  font-weight: var(--flvrs-wt-semi-bold);
 }
 h4 {
-  font-size: var(--flvrs-fsize-lg);
+  font-size: var(--flvrs-fsize-xl);
   line-height: var(--flvrs-lh-title);
-  font-weight: var(--flvrs-wt-medium);
+  font-weight: var(--flvrs-wt-semi-bold);
 }
 h5 {
-  font-size: var(--flvrs-fsize-md);
+  font-size: var(--flvrs-fsize-lg);
   line-height: var(--flvrs-lh-title);
-  font-weight: var(--flvrs-wt-medium);
+  font-weight: var(--flvrs-wt-semi-bold);
 }
 h6 {
-  font-size: var(--flvrs-fsize-base);
+  font-size: var(--flvrs-fsize-md);
   line-height: var(--flvrs-lh-title);
-  font-weight: var(--flvrs-wt-medium);
+  font-weight: var(--flvrs-wt-semi-bold);
 }
 p, span, a, li, blockquote, label, strong, em {
   font-size: var(--flvrs-fsize-base);

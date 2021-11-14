@@ -59,12 +59,12 @@
   }
 
   &--neutral-alt {
-    --flvrs-btn-bg-color: var(--flvrs-neutral-300);
+    --flvrs-btn-bg-color: var(--flvrs-neutral-200);
     --flvrs-btn-fcolor: var(--flvrs-neutral-900);
 
     &:hover {
-      --flvrs-btn-bg-color: var(--flvrs-neutral-400);
-      --flvrs-btn-border-color: var(--flvrs-neutral-400);
+      --flvrs-btn-bg-color: var(--flvrs-neutral-300);
+      --flvrs-btn-border-color: var(--flvrs-neutral-300);
     }
   }
 

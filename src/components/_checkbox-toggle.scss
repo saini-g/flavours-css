@@ -1,14 +1,15 @@
 @use '../abstracts/mixins' as *;
 
 .flvrs-checkbox-toggle {
-  --flvrs-checkbox-toggle-size: 3rem;
+  --flvrs-checkbox-toggle-size: 2rem;
   --flvrs-toggle-width: var(--flvrs-checkbox-toggle-size);
-  --flvrs-toggle-height: calc((var(--flvrs-checkbox-toggle-size) / 2) * 1.2);
-  --flvrs-toggle-padding: calc(var(--flvrs-checkbox-toggle-size) * 0.075);
-  --flvrs-handle-size: calc((var(--flvrs-checkbox-toggle-size) / 2) * 0.9);
+  --flvrs-toggle-height: calc(var(--flvrs-checkbox-toggle-size) / 2);
+  --flvrs-toggle-padding: calc(var(--flvrs-checkbox-toggle-size) / 16);
+  --flvrs-handle-height: calc((var(--flvrs-checkbox-toggle-size) / 2) * 0.75);
+  --flvrs-handle-width: calc((var(--flvrs-checkbox-toggle-size) / 2) * 0.25);
 
-  --flvrs-track-color-unchecked: var(--flvrs-neutral-400);
-  --flvrs-track-color-checked: var(--flvrs-success-300);
+  --flvrs-track-color-unchecked: var(--flvrs-neutral-300);
+  --flvrs-track-color-checked: var(--flvrs-primary-400);
   --flvrs-handle-color: var(--flvrs-neutral-100);
 
   display: inline-flex;
@@ -24,27 +25,25 @@
   }
 
   &__label {
-    color: var(--flvrs-neutral-700);
-    margin-right: var(--flvrs-gap-sm);
+    color: var(--flvrs-neutral-800);
+    margin-left: var(--flvrs-gap-xs);
   }
 
   &__label--faux {
     display: inline-block;
+    line-height: 0;
     width: var(--flvrs-toggle-width);
     height: var(--flvrs-toggle-height);
-    border-radius: calc(var(--flvrs-toggle-height) / 2);
     cursor: pointer;
-    transition: background-color var(--flvrs-time-sm) var(--flvrs-ease-out-quick);
+    transition: background-color var(--flvrs-time-xs) var(--flvrs-ease-out-quick);
 
     &::before {
       content: '';
       display: inline-block;
-      height: var(--flvrs-handle-size);
-      width: var(--flvrs-handle-size);
-      border-radius: calc(var(--flvrs-handle-size) / 2);
+      height: var(--flvrs-handle-height);
+      width: var(--flvrs-handle-width);
       background-color: var(--flvrs-handle-color);
-      transform: translate(var(--flvrs-toggle-padding), var(--flvrs-toggle-padding));
-      transition: transform var(--flvrs-time-sm) var(--flvrs-ease-out-quick);
+      transition: transform var(--flvrs-time-xs) var(--flvrs-ease-out-quick);
     }
   }
 
@@ -52,13 +51,12 @@
     @include flvrs-visually-hidden();
 
     &:disabled + .flvrs-checkbox-toggle__label--faux {
-      --flvrs-track-color-unchecked: var(--flvrs-neutral-500);
-      --flvrs-track-color-checked: var(--flvrs-success-400);
-      --flvrs-handle-color: var(--flvrs-neutral-300);
+      --flvrs-track-color-unchecked: var(--flvrs-neutral-200);
+      --flvrs-track-color-checked: var(--flvrs-neutral-500);
       cursor: not-allowed;
     }
 
-    &:focus + .flvrs-checkbox-toggle__label--faux {
+    &:focus-visible + .flvrs-checkbox-toggle__label--faux {
       box-shadow: var(--flvrs-shadow-focus-ring);
     }
 
@@ -71,12 +69,15 @@
     }
 
     &:not(:checked) + .flvrs-checkbox-toggle__label--faux::before {
-      transform: translate(var(--flvrs-toggle-padding), var(--flvrs-toggle-padding));
+      transform: translate(
+        calc((var(--flvrs-handle-height) / 2)),
+        var(--flvrs-toggle-padding)
+      );
     }
 
     &:checked + .flvrs-checkbox-toggle__label--faux::before {
       transform: translate(
-        calc(var(--flvrs-toggle-width) - var(--flvrs-toggle-padding) - var(--flvrs-handle-size)),
+        calc(var(--flvrs-toggle-width) - var(--flvrs-handle-width) - (var(--flvrs-handle-height) / 2)),
         var(--flvrs-toggle-padding)
       );
     }

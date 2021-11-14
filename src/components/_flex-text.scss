@@ -15,13 +15,13 @@
 
   h2, .flvrs-flex-text__title, .flvrs-flex-text__heading {
     margin-bottom: calc(var(--flvrs-gap-sm) * var(--flvrs-vgap-multiplier));
-    font-size: calc(var(--flvrs-fsize-2xl) * var(--flvrs-flex-fsize-multiplier));
+    font-size: calc(var(--flvrs-fsize-3xl) * var(--flvrs-flex-fsize-multiplier));
     line-height: calc(var(--flvrs-lh-title) * var(--flvrs-lh-multiplier));
   }
 
   h3, .flvrs-flex-text__subtitle, .flvrs-flex-text__subheading {
     margin-bottom: calc(var(--flvrs-gap-sm) * var(--flvrs-vgap-multiplier));
-    font-size: calc(var(--flvrs-fsize-xl) * var(--flvrs-flex-fsize-multiplier));
+    font-size: calc(var(--flvrs-fsize-2xl) * var(--flvrs-flex-fsize-multiplier));
     line-height: calc(var(--flvrs-lh-title) * var(--flvrs-lh-multiplier));
   }
 

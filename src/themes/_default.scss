@@ -1,39 +1,45 @@
 :root, [data-theme='default'] {
-  --flvrs-primary-100: hsl(200, 74%, 95%);
-  --flvrs-primary-200: hsl(200, 74%, 89%);
-  --flvrs-primary-300: hsl(200, 74%, 79%);
-  --flvrs-primary-400: hsl(200, 74%, 66%);
-  --flvrs-primary-500: hsl(200, 74%, 53%);
-  --flvrs-primary-600: hsl(200, 74%, 40%);
-  --flvrs-primary-700: hsl(200, 74%, 28%);
+  --flvrs-primary-100: hsl(274, 90%, 96%);
+  --flvrs-primary-200: hsl(274, 90%, 88%);
+  --flvrs-primary-300: hsl(274, 90%, 76%);
+  --flvrs-primary-400: hsl(274, 88%, 65%);
+  --flvrs-primary-500: hsl(274, 88%, 50%);
+  --flvrs-primary-600: hsl(274, 88%, 42%);
+  --flvrs-primary-700: hsl(274, 88%, 32%);
 
   --flvrs-neutral-100: hsl(0, 0%, 100%);
-  --flvrs-neutral-200: hsl(0, 9%, 98%);
-  --flvrs-neutral-300: hsl(30, 5%, 92%);
-  --flvrs-neutral-400: hsl(30, 4%, 78%);
-  --flvrs-neutral-500: hsl(30, 2%, 58%);
-  --flvrs-neutral-600: hsl(36, 2%, 43%);
-  --flvrs-neutral-700: hsl(30, 3%, 26%);
-  --flvrs-neutral-800: hsl(24, 6%, 17%);
-  --flvrs-neutral-900: hsl(0, 7%, 3%);
+  --flvrs-neutral-200: hsl(220, 22%, 94%);
+  --flvrs-neutral-300: hsl(220, 22%, 86%);
+  --flvrs-neutral-400: hsl(220, 22%, 74%);
+  --flvrs-neutral-500: hsl(220, 22%, 62%);
+  --flvrs-neutral-600: hsl(220, 22%, 52%);
+  --flvrs-neutral-700: hsl(220, 22%, 40%);
+  --flvrs-neutral-800: hsl(220, 22%, 30%);
+  --flvrs-neutral-900: hsl(220, 22%, 20%);
 
-  --flvrs-success-100: hsl(161, 73%, 75%);
-  --flvrs-success-200: hsl(161, 70%, 58%);
-  --flvrs-success-300: hsl(161, 75%, 43%);
-  --flvrs-success-400: hsl(161, 92%, 33%);
-  --flvrs-success-500: hsl(161, 94%, 27%);
+  --flvrs-success-100: hsl(160, 70%, 90%);
+  --flvrs-success-200: hsl(160, 70%, 78%);
+  --flvrs-success-300: hsl(160, 70%, 66%);
+  --flvrs-success-400: hsl(160, 70%, 50%);
+  --flvrs-success-500: hsl(160, 70%, 42%);
+  --flvrs-success-600: hsl(160, 70%, 36%);
+  --flvrs-success-700: hsl(160, 70%, 30%);
 
-  --flvrs-danger-100: hsl(0, 77%, 74%);
-  --flvrs-danger-200: hsl(0, 76%, 61%);
-  --flvrs-danger-300: hsl(0, 65%, 50%);
-  --flvrs-danger-400: hsl(0, 82%, 43%);
-  --flvrs-danger-500: hsl(0, 98%, 35%);
+  --flvrs-danger-100: hsl(360, 80%, 94%);
+  --flvrs-danger-200: hsl(360, 80%, 84%);
+  --flvrs-danger-300: hsl(360, 80%, 76%);
+  --flvrs-danger-400: hsl(360, 80%, 68%);
+  --flvrs-danger-500: hsl(360, 76%, 60%);
+  --flvrs-danger-600: hsl(360, 76%, 50%);
+  --flvrs-danger-700: hsl(360, 76%, 44%);
 
-  --flvrs-warn-100: hsl(41, 100%, 88%);
-  --flvrs-warn-200: hsl(41, 100%, 77%);
-  --flvrs-warn-300: hsl(41, 94%, 63%);
-  --flvrs-warn-400: hsl(36, 89%, 55%);
-  --flvrs-warn-500: hsl(36, 94%, 46%);
+  --flvrs-warn-100: hsl(30, 97%, 94%);
+  --flvrs-warn-200: hsl(30, 96%, 88%);
+  --flvrs-warn-300: hsl(30, 97%, 81%);
+  --flvrs-warn-400: hsl(30, 96%, 75%);
+  --flvrs-warn-500: hsl(30, 96%, 68%);
+  --flvrs-warn-600: hsl(30, 96%, 60%);
+  --flvrs-warn-700: hsl(30, 96%, 48%);
 
-  --flvrs-focus-ring-color: hsla(208, 70%, 34%, 0.5);
+  --flvrs-focus-ring-color: hsl(220, 22%, 62%);
 }

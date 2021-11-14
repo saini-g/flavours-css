@@ -19,11 +19,13 @@
 :root, [data-flvrs-type-scale-override] {
   --flvrs-fsize-base:  1rem; /* base is between sm and md sizes */
 
+  --flvrs-fsize-xs:    calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 0.75);
   --flvrs-fsize-sm:    calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 0.875);
   --flvrs-fsize-md:    calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 1.125);
   --flvrs-fsize-lg:    calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 1.25);
-  --flvrs-fsize-xl:    calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 1.75);
-  --flvrs-fsize-2xl:   calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 2.375);
-  --flvrs-fsize-3xl:   calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 3.25);
+  --flvrs-fsize-xl:    calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 1.5);
+  --flvrs-fsize-2xl:   calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 2);
+  --flvrs-fsize-3xl:   calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 2.5);
+  --flvrs-fsize-4xl:   calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 3);
   --flvrs-fsize-jumbo: calc(var(--flvrs-fsize-base) * var(--flvrs-fsize-multiplier) * 4);
 }
